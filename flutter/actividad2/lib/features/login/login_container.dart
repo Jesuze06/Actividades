@@ -4,8 +4,6 @@ import 'bloc/login_bloc.dart';
 import 'widgets/failed_widget.dart';
 import 'widgets/initial_widget.dart';
 import 'widgets/loading_widget.dart';
-
-
 import '../../views/home.dart';
 
 class LoginContainer extends StatelessWidget {
