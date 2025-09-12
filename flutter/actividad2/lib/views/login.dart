@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../features/login/bloc/login_bloc.dart';
-import '../features/login/login_container.dart';
+import '../features/login/login.dart';
 
 
 class LoginView extends StatelessWidget {
