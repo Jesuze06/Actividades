@@ -1,6 +1,7 @@
-import 'package:actividad2/features/login/bloc/login_bloc.dart';
+import 'package:actividad2/features/login/bloc/login_bloc.dart'; 
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter/services.dart'; // Importante para el input formatter
 
 class InitialWidget extends StatelessWidget {
   final TextEditingController cedulaController = TextEditingController();
@@ -11,7 +12,7 @@ class InitialWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 247, 193, 44), // Fondo gris claro
+      backgroundColor: const Color.fromARGB(255, 247, 193, 44),
       body: SafeArea(
         child: SingleChildScrollView(
           padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
@@ -72,7 +73,6 @@ class InitialWidget extends StatelessWidget {
                       ),
                       const SizedBox(height: 32),
 
-                      // Botón principal con degradado llamativo
                       SizedBox(
                         width: double.infinity,
                         height: 55,
@@ -112,7 +112,7 @@ class InitialWidget extends StatelessWidget {
                                   CreateUserEvent(cedula: cedula, nombre: nombre));
                             },
                             style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.transparent, // Para mostrar degradado
+                              backgroundColor: Colors.transparent,
                               shadowColor: Colors.transparent,
                               shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15),
@@ -150,6 +150,7 @@ class InitialWidget extends StatelessWidget {
       maxLength: isNumber ? 10 : null,
       controller: controller,
       keyboardType: isNumber ? TextInputType.number : TextInputType.text,
+      inputFormatters: isNumber ? [FilteringTextInputFormatter.digitsOnly] : [], // se restringe a números
       decoration: InputDecoration(
         prefixIcon: Icon(icon, color: const Color.fromARGB(255, 0, 0, 0)),
         labelText: label,

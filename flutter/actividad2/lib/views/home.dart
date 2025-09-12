@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../features/homeinfo/bloc/home_info_bloc.dart';
-import '../features/homeinfo/homeinfo.dart';
+import '../features/inicio/bloc/inicio_bloc.dart';
+import '../features/inicio/incio.dart';
 
 class HomeView extends StatelessWidget {
   final String nombre;
@@ -13,7 +13,6 @@ class HomeView extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            // Imagen arriba
             Padding(
               padding: const EdgeInsets.only(
                   top: 20, left: 20, right: 20, bottom: 10),

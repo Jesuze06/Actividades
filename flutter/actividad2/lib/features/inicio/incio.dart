@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'bloc/home_info_bloc.dart';
+import 'bloc/inicio_bloc.dart';
 import 'widgets/faild.dart';
 import 'widgets/loidng.dart'; 
 import 'widgets/success.dart';
