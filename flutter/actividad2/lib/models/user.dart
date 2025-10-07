@@ -6,9 +6,9 @@ class User {
   const User({this.id, this.name, this.email});
 
   factory User.fromJson(Map<String, dynamic> json) => User(
-    id: json['id'] ?? 0,
-    name: json['name'] ?? 'No Name',
-    email: json['email'] ?? 'No Email',
+    id: json['id'],
+    name: json['name'],
+    email: json['email'],
   );
 
   @override

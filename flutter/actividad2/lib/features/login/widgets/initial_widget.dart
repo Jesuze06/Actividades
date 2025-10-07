@@ -14,7 +14,7 @@ class InitialWidget extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.grey[100],
       appBar: AppBar(
-        backgroundColor: Colors.orange[700],
+        backgroundColor: const Color.fromARGB(255, 0, 0, 0),
         title: const Text(
           "Registro de Usuario",
           style: TextStyle(color: Colors.white),

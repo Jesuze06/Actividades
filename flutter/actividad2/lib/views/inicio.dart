@@ -1,6 +1,6 @@
+import 'package:actividad2/features/inicio/cubit/inicio_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import '../features/inicio/bloc/inicio_bloc.dart';
 import '../features/inicio/incio.dart';
 
 class HomeView extends StatelessWidget {
@@ -40,8 +40,8 @@ class HomeView extends StatelessWidget {
             // Aquí la info ocupa el resto y se puede scrollear
             Expanded(
               child: BlocProvider(
-                create: (context) => HomeInfoBloc()..add(CargarHomeInfo()),
-                child: HomeinfoContainer(nombre: nombre),
+                create: (context) => InicioCubit()..fetchUsers(),
+                child: HomeContainer(nombre: nombre),
               ),
             ),
           ],
